@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | <%= brandName %></title>
+  </head>
+  <body>
+    <header>
+      <app-bar brandName="<%= brandName %>"></app-bar>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="container py-5">
+          <h1 class="mb-3">Menambahkan Story</h1>
+
+          <form class="row g-3" id="addRecordForm" novalidate>
+            <div class="col-12">
+              <masukan-gambar-dengan-pratinjau
+                masukanId="validationCustomFileInput"
+                pesanFeedbackInvalid="Wajib diisi"
+                required
+              ></masukan-gambar-dengan-pratinjau>
+            </div>
+
+            <div class="col-12">
+              <label for="validationCustomDescription" class="form-label">Deskripsi</label>
+              <textarea-dengan-validasi
+                masukanId="validationCustomDescription"
+                pesanFeedbackInvalid="Wajib diisi"
+                required
+              ></textarea-dengan-validasi>
+            </div>
+
+            <div class="col-12 text-end">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="main-footer bg-dark">
+        <div class="container px-3 py-4">
+          <footer-bar></footer-bar>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

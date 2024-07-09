@@ -1,0 +1,53 @@
+$primary-color: #5156da;
+$secondary-color: #010813;
+$third-color: #000000;
+
+@mixin width-fit {
+    width: fit-content;
+}
+
+main {
+    padding-top: 55px;
+    background-color: #30d76a;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.bg-primary{ background-color: #043026 !important;}
+
+.card {
+    min-height: 100%;
+}
+
+.card__header {
+    @include width-fit;
+
+    a {
+        &:hover {
+            opacity: 80%;
+        }
+    }
+}
+
+.card__header-title {
+    @include width-fit;
+    color:y-colorard-text;
+}
+
+.card__body-description {
+    @include width-fit;
+    color: $secondary-color;
+}
+
+.card__body-date {
+    @include width-fit;
+    color: $third-color;
+}
+
+.card__body-date {
+    @include width-fit;
+}
